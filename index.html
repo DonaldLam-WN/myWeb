@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Web</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./font/css/all.css">
+    <link rel="stylesheet" href="./css/base.css">
+
+    <link rel="stylesheet" href="./css/main-page.css">
+    <link rel="stylesheet" href="./css/home-page.css">
+    <link rel="stylesheet" href="./css/about-page.css">
+    <link rel="stylesheet" href="./css/profession-page.css">
+
+
+
+
+</head>
+
+<body>
+    <!-- Main Page Container - Contains the content of 3 part (homePage, aboutMe, profession) -->
+    <div class="mainPageContainer homePageWrapper" id="mainPageContainer">
+
+
+
+
+        <!-- Home Page Header Container - Contains the Background image and Topbar -->
+        <div class="mainPageHeader" id="mainPageHeader">
+
+            <!-- Header Image Container - Contains the Background image and its effects -->
+            <div class="HeaderImageContainer">
+                <!-- The gradient effect -->
+                <img src="./img/home/A00.webp" class="homePageHeaderImage" id="img1">
+                <img src="" class="homePageHeaderImage" id="img2">
+            </div>
+
+            <!-- Topbar Wrapper - Repesents the whole topbar -->
+            <div class="topbarWrapper " id="topbarWrapper">
+
+                <!-- Topbar - To maintain the min. width when the window size reduced -->
+                <div class="topbar wrapperLimit">
+
+                    <!-- Icon Hyperlinks - Back to the top of the page -->
+                    <a href="javascript:;" id="iconHyperlinks">
+                        <!-- Icon Wrapper - Contain the icon image and name -->
+                        <ul class="iconWrapper">
+                            <li>
+                                <!-- Icon image -->
+                                <div class="iconImg"></div>
+                            </li>
+                            <li>
+                                <div>
+                                    <!-- Name -->
+                                    <span>Donald Lam</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </a>
+
+                    <!-- Social Media List - Contains different social media hyperlinks -->
+                    <ul class="socialMedia">
+                        <!-- Facebook -->
+                        <li>
+                            <a class="facebookLogo" href="https://www.facebook.com/profile.php?id=100007801004157">
+                                <i class="fab fa-facebook"></i>
+                            </a>
+                        </li>
+                        <!-- Instagram -->
+                        <li>
+                            <a class="instagramLogo" href="https://www.instagram.com/lmh_donald/">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </li>
+                        <!-- Whatsapp -->
+                        <li>
+                            <a class="whatsappLogo" href="javascript:;">
+                                <i class="fab fa-whatsapp"></i>
+                                <!-- Whatsapp QR Code Wrapper - display the QR Code -->
+                                <div class="whatsappQRCode">
+                                    <img src="./img/topbar/whatsapp-qrcode.webp">
+                                    <span>Tel:96380916</span>
+                                </div>
+                            </a>
+                        </li>
+                        <!-- Line -->
+                        <li>
+                            <a class="lineLogo" href="javascript:;">
+                                <i class="fab fa-line"></i>
+                                <!-- Line QR Code Wrapper - display the QR Code -->
+                                <div class="lineQRCode">
+                                    <img src="./img/topbar/line-qrcode.webp">
+                                    <span>Line:368875033</span>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <!-- nav Content -->
+                    <ul class="navList">
+                        <li>
+                            <!-- Diary Page nav -->
+                            <a href="javascript:;" class="diary navElement">
+                                <div>
+                                    <span>Diary</span>
+                                </div>
+                                <!-- The slidding bar -->
+                                <div class="yellowBar shortBar diaryBar"></div>
+                            </a>
+                        </li>
+                        <li>
+                            <!-- Profession Page nav -->
+                            <a href="javascript:;" class="profession navElement" id="profession">
+                                <div>
+                                    <span>Profession</span>
+                                </div>
+                                <!-- The slidding bar -->
+                                <div class="yellowBar professionBar"></div>
+                            </a>
+                        </li>
+                        <li>
+                            <!-- About Me Page nav -->
+                            <a href="javascript:;" class="aboutMe navElement" id="aboutMe">
+                                <div>
+                                    <span>About Me</span>
+                                </div>
+                                <!-- The slidding bar -->
+                                <div class="yellowBar aboutMeBar"></div>
+                            </a>
+                        </li>
+                        <li>
+                            <!-- Home Page nav -->
+                            <a href="javascript:;" class="homePage navElement" id="homePage">
+                                <div>
+                                    <span>Home Page</span>
+                                </div>
+                                <!-- The slidding bar -->
+                                <div class="yellowBar homePageBar displayingBar"></div>
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+            <div class="homePageTextWrapper">
+                <h1>Welcome!</h1>
+                <br>
+                <h2>To My First Website</h2>
+                <h3>(Unfinished Version) Browsing on the computer has better results.</h3>
+            </div>
+
+        </div>
+
+
+        <!-- About Me Page Header - the div display both in home page and aboutMe page -->
+        <div class="aboutMeHeader wrapperLimit">
+            <div class="avatarContainer">
+
+                <a href="javascript:;" class="basicInfoBtn aboutMeInfoBtn">
+                    <p class="fas fa-info"></p>
+                </a>
+
+                <a href="javascript:;" class="graduationBtn aboutMeInfoBtn">
+                    <p class="fas fa-graduation-cap"></p>
+                </a>
+
+                <a href="javascript:;" class="academicResultBtn aboutMeInfoBtn">
+                    <p class="fas fa-book-open"></p>
+                </a>
+
+                <a href="javascript:;" class="professionBtn">
+                    <p class="fas fa-laptop-code"></p>
+                </a>
+            </div>
+
+            <a href="javascript:;" class="aboutMeLink">
+                <img src="./img/aboutMe/about-me-button.png">
+            </a>
+
+            <div class="aboutMeInfoWrapper aboutMeInfoCollapsed info">
+
+                <div class="infoWrapper widthLimit">
+
+                    <div class="selfBasicInfo">
+                        <p>LAM, Man Ho</p>
+                        <p><i class="fas fa-birthday-cake"></i>&nbsp;&nbsp;06-08-2002</p>
+                        <p><i class="fas fa-map-marker-alt"></i>&nbsp;&nbsp;Hong Kong</p>
+                        <p><i class="fas fa-phone-alt"></i>&nbsp;&nbsp;(+852) 96xxxx16</p>
+                        <p><i class="fas fa-mail-bulk"></i>&nbsp;&nbsp;manholam8@gmail.com</p>
+                    </div>
+                    <div class="selfIntroPar">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint laudantium optio quis quasi
+                            modi pariatur non deserunt repudiandae tenetur quod eum voluptate, error fugit saepe minima
+                            aperiam nulla soluta? Dicta, placeat earum suscipit esse culpa ab nobis animi ipsa
+                            similique.</p>
+                    </div>
+
+                </div>
+
+                <div class="graduationWrapper">
+
+
+                    <div class="ktgssGraduation graduationBox">
+                        <h1>KTGSS</h1>
+                        <a href="https://www.ktgss.edu.hk/" class="ktgssIcon"></a>
+                        <h2>2014 - 2020</h2>
+                        <p>2020 KTGSS Graduated</p>
+                        <p>Scout Brigade 136</p>
+                        <p>WRO Galaxy Adventurer</p>
+                    </div>
+                    <div class="hkdse graduationBox">
+                        <h1>HKDSE</h1>
+                        <a href="https://www.jupas.edu.hk/en/" class="jupasIcon"></a>
+                        <h2>2020 Summer</h2>
+                        <p>HKDSE Best5 23</p>
+                        <p>JUPAS JS4401</p>
+                        <p>Faculty of Engineering</p>
+                        <p>Lee Woo Sing College</p>
+                    </div>
+                    <div class="majorSelection graduationBox">
+                        <h1>CSCI</h1>
+                        <a href="https://www.cuhk.edu.hk/english.html" class="cseIcon"></a>
+                        <h2>2021</h2>
+                        <p>Computer Science Major</p>
+                    </div>
+                    <div class="cuhkGraduation graduationBox">
+                        <h1>CUHK</h1>
+                        <a href="https://www.cse.cuhk.edu.hk" class="cuhkIcon"></a>
+                        <h2>2020 - 2024</h2>
+                    </div>
+
+                    <div class="graduationArrows arrow01"><i class="fas fa-angle-double-right"></i></div>
+                    <div class="graduationArrows arrow02"><i class="fas fa-angle-double-right"></i></div>
+                    <div class="graduationArrows arrow03"><i class="fas fa-angle-double-right"></i></div>
+
+
+                </div>
+
+
+                <div class="academicResultWrapper ">
+
+                    <!-- Academic Result Content - The main content -->
+                    <div class="academicResultContent">
+
+                        <!-- Year1 Sem2 Result -->
+                        <div class="year1Sem2Container">
+                            <a href="javascript:;" class="resultTitle">
+                                <span class="year1Sem2">Year1 Sem2</span>
+                            </a>
+                            <table class="year1Sem2Result">
+                                <thead>
+                                    <tr>
+                                        <th>Class</th>
+                                        <th>Name</th>
+                                        <th>Units</th>
+                                        <th>Grade</th>
+                                    </tr>
+                                </thead>
+                                <tr>
+                                    <td>ELTU1001</td>
+                                    <td>Foundation Eng for Uni Studies</td>
+                                    <td>4.00</td>
+                                    <td>B+</td>
+                                </tr>
+                                <tr>
+                                    <td>ENGG1120</td>
+                                    <td>Linear Algebra for Engineers</td>
+                                    <td>3.00</td>
+                                    <td>A</td>
+                                </tr>
+                                <tr>
+                                    <td>ENGG1130</td>
+                                    <td>Multivariable Calculus for Eng</td>
+                                    <td>3.00</td>
+                                    <td>A</td>
+                                </tr>
+                                <tr>
+                                    <td>MATH1030</td>
+                                    <td>Linear Algebra I</td>
+                                    <td>3.00</td>
+                                    <td>A-</td>
+                                <tr>
+                                    <td>STAT1011</td>
+                                    <td>Introduction to Statistics</td>
+                                    <td>3.00</td>
+                                    <td>A-</td>
+                                </tr>
+                                <tr>
+                                    <td>PHED1027</td>
+                                    <td>Team Handball (Men)</td>
+                                    <td>1.00</td>
+                                    <td>P</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="4">Term GPA: 3.713</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- Year1 Sem1 Result -->
+                        <div class="year1Sem1Container collapsed">
+                            <a href="javascript:;" class="resultTitle">
+                                <span class="year1Sem1">Year1 Sem1</span>
+                            </a>
+                            <table class="year1Sem1Result">
+                                <thead>
+                                    <tr>
+                                        <th>Class</th>
+                                        <th>Name</th>
+                                        <th>Units</th>
+                                        <th>Grade</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>CHLT1100</td>
+                                        <td>University Chinese I</td>
+                                        <td>3.00</td>
+                                        <td>P</td>
+                                    </tr>
+                                    <tr>
+                                        <td>ENGG1100</td>
+                                        <td>Problem Solving By Programming</td>
+                                        <td>3.00</td>
+                                        <td>A</td>
+                                    </tr>
+                                    <tr>
+                                        <td>GEWS1011</td>
+                                        <td>College Induction Course</td>
+                                        <td>3.00</td>
+                                        <td>B+</td>
+                                    </tr>
+                                    <tr>
+                                        <td>MATH1510</td>
+                                        <td>Calculus for Engineers</td>
+                                        <td>3.00</td>
+                                        <td>A-</td>
+                                    </tr>
+                                    <tr>
+                                        <td>PHYS1110</td>
+                                        <td>Engineering Phy: Mech & Thermo</td>
+                                        <td>3.00</td>
+                                        <td>A-</td>
+                                    </tr>
+                                    <tr>
+                                        <td>PHED1041</td>
+                                        <td>Badminton (Men)</td>
+                                        <td>1.00</td>
+                                        <td>C-</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="4">Term GPA: 3.592</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- DSE Result -->
+                        <div class="dseContainer collapsed">
+                            <a href="javascript:;" class="resultTitle">
+                                <span class="dse">DSE Grading</span>
+                            </a>
+                            <table class="dseResult">
+                                <thead>
+                                    <tr>
+                                        <th>Subjects</th>
+                                        <th>Subject Level</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Mathematics (Compulsory and Extended)</td>
+                                        <td>5*</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Mathematics (Algebra and Calculus)</td>
+                                        <td>5*</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Physics</td>
+                                        <td>5</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Chinese Language</td>
+                                        <td>3</td>
+                                    </tr>
+                                    <tr>
+                                        <td>English Language</td>
+                                        <td>3</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Liberal Studies</td>
+                                        <td>3</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="4">Best Five: 23</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="professionHeader wrapperLimit">
+
+            <div class="professionHeaderContainer clearfix">
+
+                <h1>My Self-Learning Categories</h1>
+
+                <div class="professionLinkWrapper">
+                    <a href="javascript:;" class="EFDIntro professionLink">
+                        <img src="./img/profession/frontendDevelopment.webp">
+                        <h2>Front-End Development</h2>
+                        <p>HTML5</p>
+                        <p>CSS3</p>
+                        <p>JavaScript</p>
+                        <div class="professionLinkBtn">MORE ></div>
+                    </a>
+                </div>
+
+                <div class="professionLinkWrapper">
+                    <a href="javascript:;" class="javaIntro professionLink">
+                        <img src="./img/profession/java.webp">
+                        <h2>Java</h2>
+                        <p>JavaSE</p>
+                        <p>JavaWeb</p>
+                        <div class="professionLinkBtn">MORE ></div>
+                    </a>
+                </div>
+
+                <div class="professionLinkWrapper">
+                    <a href="javascript:;" class="unrealEngineIntro professionLink">
+                        <img src="./img/profession/unrealEngine.webp">
+                        <h2>Unreal Engine</h2>
+                        <p>C++</p>
+                        <p>Animation</p>
+                        <div class="professionLinkBtn">MORE ></div>
+                    </a>
+                </div>
+
+
+
+
+
+
+            </div>
+
+
+
+        </div>
+
+
+
+    </div>
+
+
+
+    <div style="margin-bottom: 1000px;"></div>
+</body>
+
+<script src="./js/variable-list.js"></script>
+<script src="./js/tools.js"></script>
+<script src="./js/function.js"></script>
+<script src="./js/main-page.js"></script>
+<script src="./js/home-page.js"></script>
+<script src="./js/about-page.js"></script>
+<script src="./js/profession-page.js"></script>
+
+</html>

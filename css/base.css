@@ -1,0 +1,21 @@
+.clearfix::before, 
+.clearfix::after{
+    content: '';
+    display: table;
+    clear: both;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+    color: #1D1D1F;
+}
+
+.wrapperLimit{
+    width: 1150px;
+    margin: 0 auto;
+}
