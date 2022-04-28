@@ -152,7 +152,7 @@
 .aboutMeWrapper .aboutMeInfoWrapper{
     width: 100%;
     min-width: 1050px;
-    height: 400px;
+    height: 500px;
     top: 500px;
     /* bottom: 0; */
     background-color: rgb(176, 239, 255);
@@ -203,6 +203,9 @@
     margin-top: 3px;
     font-size: 30px;
 }
+/* .info .infoWrapper .selfBasicInfo .addressInfo{
+    height: 80px;
+} */
 .info .infoWrapper .selfIntroPar{
     display: block;
     width: 650px;

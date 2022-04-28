@@ -23,7 +23,7 @@
     /* display: inline-flex; */
     object-fit: cover;
     float: left;
-    filter: alpha(opacity = 30)；
+    filter: alpha(opacity = 30);
 }
 
 
