@@ -1,0 +1,97 @@
+/* 
+    Profession Page
+*/
+#profession_container{
+    width: 100%;
+    min-width: 1150px;
+    height: 0;
+    overflow: hidden;
+}
+.cur_profession #profession_container{
+    height: auto;
+}
+#prog_lang_container{
+    height: 600px;
+    background-image: url(../img/prof.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+    color: black;
+}
+.development_container h1{
+    font-size: 30px;
+    line-height: 60px;
+    color: aliceblue;
+}
+#frontend_container h1{
+    color: black;
+}
+.development_container h2{
+    font-size: 25px;
+    line-height: 30px;
+    text-align: center;
+}
+.development_container h3{
+    font-size: 20px;
+    line-height: 30px;
+    text-align: left;
+    font-weight: bold;
+    margin: 10px 0 10px 0;
+}
+.development_container h4{
+    font-size: 15px;
+    line-height: 20px;
+    text-align: left;
+    font-weight: bold;
+    margin: 5px 0;
+}
+.development_container span{
+    display: inline-block;
+    width: fit-content;
+    padding: 5px 10px;
+    border: 1px solid rgb(199, 203, 221);
+    border-radius: 15px;
+    cursor: pointer;
+    margin: 2px;
+}
+
+.carousel_container{
+    margin: 0px auto;
+    width: 640px;
+    height: 410px;
+    position: relative;
+    /* background-color: #bfa; */
+}
+.carousel_list{
+    list-style: none;
+    width: 2600px;
+    position: absolute;
+    left: 0;
+}
+/* 840 */
+.carousel_elements{
+    float: left;
+    margin: 0 200px;
+    padding: 10px 20px 0 20px;
+    width: 600px;
+    height: 400px;
+    background-color: rgb(237, 237, 237);
+    scale: 0.7;
+    transition: scale 0.75s;
+    text-align: left;
+}
+.cur_element{
+    scale: 1;
+}
+.carousel_elements:first-child{
+    margin-left: 0;
+}
+
+#frontend_container{
+    height: 600px;
+    background-image: url(../img/tech.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+    color: rgb(33, 33, 33);
+}

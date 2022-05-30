@@ -1,0 +1,283 @@
+/* 
+    Home header styles
+*/
+#home_header_container{
+    width: 100%;
+    min-width: 1150px;
+    height: 800px;
+    /* height: 0; */
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+    /* transition: height 0.5s; */
+}
+/* .cur_home #home_header_container{
+    height: 800px;
+} */
+.home_img{
+    width: 100%;
+    height: 800px;
+    position: absolute;
+    z-index: 10;
+}
+.cur_about .home_img{
+    z-index: 0;
+}
+
+/*
+    Topbar styles
+*/
+.topbar_container{
+    width: 100%;
+    min-width: 1150px;
+    z-index: 9990;
+    background-image: linear-gradient(#f6f6f7, rgb(6, 189, 189));
+    position: fixed;
+}
+.cur_home .topbar_container{
+    background-image: none;
+    position: relative;
+}
+/* .cur_about .topbar_container{
+    background-image: none;
+    position: relative;
+    height: 50px;
+    overflow: visible;
+} */
+.cur_home .topbar_transparent{
+    background-image: none;
+    position: relative;
+    height: 50px;
+    background-color: transparent;
+    overflow: hidden;
+}
+.cur_home .topbar_disappear{
+    height: 0;
+}
+.cur_home .topbar_scrolling{
+    height: 50px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(#96ccf2, #808080);
+    box-shadow: 10px rgba(0, 0, 0, .5);
+    transition: height 0.5s;
+    overflow: hidden;
+}
+.content_extand{
+    overflow: visible;
+}
+
+
+/* 
+    Home icon styles
+*/
+#home_icon_container{
+    width: 180px;
+    height: 50px;
+    padding: 0 10px;
+    position: relative;
+    float: left;
+    left: 100px;
+}
+.home_icon{
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    margin-top: 5px;
+    float: left;
+    background-image: url(../img/home-icon.webp);
+    background-size: contain;
+}
+.home_name{
+    display: block;
+    height: 50px;
+    width: 130px;
+    margin-left: 10px;
+    float: left;
+    text-align: center;
+    font-size: 20px;
+    line-height: 50px;
+    color: #fff;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 800;
+}
+
+/* 
+    Nav list styles
+*/
+.nav_list{
+    width: 650px;
+    height: 50px;
+    margin: 0 auto;
+    float: right;
+    right: 50px;
+    position: relative;
+    overflow: hidden;
+    overflow: visible;
+}
+.nav_list_elements{
+    display: block;
+    float: right;
+    width: fit-content;
+    height: 50px;
+    margin: 0 40px;
+}
+.nav_btn{
+    display: block;
+    align-items: center;
+    line-height: 50px;
+    font-size: 20px;
+    text-align: center;
+    color: #fff;
+    position: relative;
+}
+.nav_bar{
+    width: 0;
+    height: 2px;
+    background-color: rgb(207, 207, 20);
+    position: absolute;
+    bottom: 13px;
+    transition: width 0.3s;
+}
+.nav_list_elements:hover .nav_bar,
+.cur_home .nav_home .nav_bar,
+.cur_about .nav_about .nav_bar,
+.cur_academic .nav_academic .nav_bar,
+.cur_profession .nav_profession .nav_bar{
+    width: 100%;
+}
+
+/* 
+    Contact list styles
+*/
+#contact_list{
+    width: 200px;
+    height: 50px;
+    float: left;
+    left: -400px;
+    position: relative;
+    z-index: 99999;
+}
+.contact_logo{
+    display: block;
+    height: 50px;
+    width: 30px;
+    line-height: 50px;
+    font-size: 20px;
+    text-align: center;
+    color: #fff;
+    margin: 0 10px;
+    float: left;
+    top: 0;
+    position: relative;
+}
+.whatsapp_qrcode,
+.line_qrcode{
+    left: -32.5px;
+    top: 40px;
+    width: 100px;
+    height: 0px;
+    font-size: 12px;
+    text-align: center;
+    line-height: 1;
+    color: black;
+    background-color: #f6f6f7;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+    border-radius: 10px;
+    color: #808080;
+    overflow: hidden;
+    position: absolute;
+    z-index: 99999;
+    transition: height 0.3s;
+}
+.whatsapp_logo::after,
+.line_logo::after{
+    position: absolute;
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    border: 8px solid transparent;
+    border-top: none;
+    border-bottom-color: #f7f6f6;
+    top: -90px;
+    left: 7px;
+    margin: auto;
+    z-index: 99999;
+}
+.whatsapp_logo img, .line_logo img{
+    width: 90px;
+    margin: 5px;
+}
+.whatsapp_logo:hover .whatsapp_qrcode, .whatsapp_logo:hover::after,
+.line_logo:hover .line_qrcode, .line_logo:hover::after{
+    display: block;
+    height: 125px;
+}
+
+/* 
+    Home - Working Timetable
+*/
+#timetable_container{
+    height: 0;
+    width: 100%;
+    min-width: 1150px;
+    /* background-color: rgb(219, 215, 226); */
+    /* color */
+    background-image: url(../img/summer.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    transition: height 0.5s;
+}
+.cur_home #timetable_container{
+    height: 500px;
+    padding-top: 20px;
+}
+#timetable_container h1{
+    height: 40px;
+    font-size: 30px;
+    line-height: 30px;
+    text-align: center;
+}
+#timetable{
+    border: 2px solid black;
+    margin: 25px auto;
+    border-collapse: collapse;
+}
+#timetable th,
+#timetable td{
+    background-color: #fff;
+    border: 1px solid black;
+    height: 30px;
+    width: 120px;
+    vertical-align: middle;
+    text-align: center;
+}
+#timetable th{
+    border-bottom: 2px solid black;
+    font-weight: bolder;
+}
+#timetable th{
+    border-bottom: 2px solid black;
+    font-weight: bolder;
+}
+#timetable th:first-child,
+#timetable td:first-child{
+    border-right: 2px solid black;
+    font-weight: bolder;
+}
+#timetable .timetable_01{
+    background-color: rgb(147, 255, 151);
+}
+
+
+
+/* 
+    Home Page - Hiking Photobiography
+*/
+#hiking_container{
+    height: 700px;
+    background-color: #baf;
+}

@@ -1,524 +1,921 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Web</title>
+
+    <!-- CSS Style -->
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./font/css/all.css">
     <link rel="stylesheet" href="./css/base.css">
-
-    <link rel="stylesheet" href="./css/main-page.css">
-    <link rel="stylesheet" href="./css/home-page.css">
-    <link rel="stylesheet" href="./css/about-page.css">
-    <link rel="stylesheet" href="./css/profession-page.css">
-
-
-
-
+    <link rel="stylesheet" href="./css/page.css">
+    <link rel="stylesheet" href="./css/home.css">
+    <link rel="stylesheet" href="./css/about.css">
+    <link rel="stylesheet" href="./css/academic.css">
+    <link rel="stylesheet" href="./css/profession.css">
 </head>
-
 <body>
-    <!-- Main Page Container - Contains the content of 3 part (homePage, aboutMe, profession) -->
-    <div class="mainPageContainer homePageWrapper" id="mainPageContainer">
+    <!-- The container of whole page -->
+    <div id="page_container" class="cur_home">
+    <!-- <div id="page_container" class="cur_about"> -->
+    <!-- <div id="page_container" class="cur_academic"> -->
+    <!-- <div id="page_container" class="cur_profession"> -->
 
+        <!-- The container of Home header -->
+        <div id="home_header_container">
 
-
-
-        <!-- Home Page Header Container - Contains the Background image and Topbar -->
-        <div class="mainPageHeader" id="mainPageHeader">
-
-            <!-- Header Image Container - Contains the Background image and its effects -->
-            <div class="HeaderImageContainer">
-                <!-- The gradient effect -->
-                <img src="./img/home/A00.webp" class="homePageHeaderImage" id="img1">
-                <img src="" class="homePageHeaderImage" id="img2">
+            <!-- The carousels images -->
+            <div id="home_image_container">
+                <img src="./img/A01.webp" class="home_img" id="home_img1">
+                <img src="" class="home_img" id="home_img2">
             </div>
 
-            <!-- Topbar Wrapper - Repesents the whole topbar -->
-            <div class="topbarWrapper " id="topbarWrapper">
+            <!-- The topbar -->
+            <div id="topbar_container" class="topbar_container topbar_transparent">
 
-                <!-- Topbar - To maintain the min. width when the window size reduced -->
-                <div class="topbar wrapperLimit">
-
-                    <!-- Icon Hyperlinks - Back to the top of the page -->
-                    <a href="javascript:;" id="iconHyperlinks">
-                        <!-- Icon Wrapper - Contain the icon image and name -->
-                        <ul class="iconWrapper">
-                            <li>
-                                <!-- Icon image -->
-                                <div class="iconImg"></div>
-                            </li>
-                            <li>
-                                <div>
-                                    <!-- Name -->
-                                    <span>Donald Lam</span>
-                                </div>
-                            </li>
-                        </ul>
-                    </a>
-
-                    <!-- Social Media List - Contains different social media hyperlinks -->
-                    <ul class="socialMedia">
-                        <!-- Facebook -->
-                        <li>
-                            <a class="facebookLogo" href="https://www.facebook.com/profile.php?id=100007801004157">
-                                <i class="fab fa-facebook"></i>
-                            </a>
-                        </li>
-                        <!-- Instagram -->
-                        <li>
-                            <a class="instagramLogo" href="https://www.instagram.com/lmh_donald/">
-                                <i class="fab fa-instagram"></i>
-                            </a>
-                        </li>
-                        <!-- Whatsapp -->
-                        <li>
-                            <a class="whatsappLogo" href="javascript:;">
-                                <i class="fab fa-whatsapp"></i>
-                                <!-- Whatsapp QR Code Wrapper - display the QR Code -->
-                                <div class="whatsappQRCode">
-                                    <img src="./img/topbar/whatsapp-qrcode.webp">
-                                    <span>Tel:96380916</span>
-                                </div>
-                            </a>
-                        </li>
-                        <!-- Line -->
-                        <li>
-                            <a class="lineLogo" href="javascript:;">
-                                <i class="fab fa-line"></i>
-                                <!-- Line QR Code Wrapper - display the QR Code -->
-                                <div class="lineQRCode">
-                                    <img src="./img/topbar/line-qrcode.webp">
-                                    <span>Line:368875033</span>
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
-
-                    <!-- nav Content -->
-                    <ul class="navList">
-                        <li>
-                            <!-- Diary Page nav -->
-                            <a href="javascript:;" class="diary navElement">
-                                <div>
-                                    <span>Diary</span>
-                                </div>
-                                <!-- The slidding bar -->
-                                <div class="yellowBar shortBar diaryBar"></div>
-                            </a>
-                        </li>
-                        <li>
-                            <!-- Profession Page nav -->
-                            <a href="javascript:;" class="profession navElement" id="profession">
-                                <div>
-                                    <span>Profession</span>
-                                </div>
-                                <!-- The slidding bar -->
-                                <div class="yellowBar professionBar"></div>
-                            </a>
-                        </li>
-                        <li>
-                            <!-- About Me Page nav -->
-                            <a href="javascript:;" class="aboutMe navElement" id="aboutMe">
-                                <div>
-                                    <span>About Me</span>
-                                </div>
-                                <!-- The slidding bar -->
-                                <div class="yellowBar aboutMeBar"></div>
-                            </a>
-                        </li>
-                        <li>
-                            <!-- Home Page nav -->
-                            <a href="javascript:;" class="homePage navElement" id="homePage">
-                                <div>
-                                    <span>Home Page</span>
-                                </div>
-                                <!-- The slidding bar -->
-                                <div class="yellowBar homePageBar displayingBar"></div>
-                            </a>
-                        </li>
-                    </ul>
-
+                <!-- Home icon -->
+                <div id="home_icon_container" class="mouse_pointer">
+                    <div class="home_icon"></div>
+                    <span class="home_name">Donald Lam</span>
                 </div>
 
-            </div>
+                <!-- Contact -->
+                <ul id="contact_list">
+                    <li>
+                        <a href="https://www.facebook.com/profile.php?id=100007801004157" class="contact_logo">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/lmh_donald/" class="contact_logo">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <div class="contact_logo whatsapp_logo mouse_pointer">
+                            <i class="fab fa-whatsapp"></i>
+                            <div class="whatsapp_qrcode">
+                                <img src="./img/whatsapp-qrcode.webp">
+                                <span>Tel: 96380916</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="contact_logo line_logo mouse_pointer">
+                            <i class="fab fa-line"></i>
+                            <div class="line_qrcode">
+                                <img src="./img/line-qrcode.webp">
+                                <span>Line: 368875033</span>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
 
-            <div class="homePageTextWrapper">
-                <h1>Welcome!</h1>
-                <br>
-                <h2>To My First Website</h2>
-                <h3>(Unfinished Version) Browsing on the computer has better results.</h3>
+                <!-- nav list -->
+                <ul class="nav_list">
+                    <li class="nav_list_elements nav_profession">
+                        <div class="go_to_profession nav_btn mouse_pointer">
+                            Profession
+                            <div class="nav_bar"></div>
+                        </div>
+                    </li>
+                    <li class="nav_list_elements nav_academic">
+                        <div class="go_to_academic nav_btn mouse_pointer">
+                            Academic
+                            <div class="nav_bar"></div>
+                        </div>
+                    </li>
+                    <li class="nav_list_elements nav_about">
+                        <div class="go_to_about nav_btn mouse_pointer">
+                            About
+                            <div class="nav_bar"></div>
+                        </div>
+                    </li>
+                    <li class="nav_list_elements nav_home">
+                        <div class="go_to_home nav_btn mouse_pointer">
+                            Home
+                            <div class="nav_bar"></div>
+                        </div>
+                    </li>
+                </ul>
             </div>
-
         </div>
 
-
-        <!-- About Me Page Header - the div display both in home page and aboutMe page -->
-        <div class="aboutMeHeader wrapperLimit">
-            <div class="avatarContainer">
-
-                <a href="javascript:;" class="basicInfoBtn aboutMeInfoBtn">
+        <!-- The container of About Page -->
+        <div id="about_container">
+            <!-- The nav-list -->
+            <div id="about_nav_list">
+                <div class="aboutme_btn info_btn mouse_pointer">
                     <p class="fas fa-info"></p>
-                </a>
-
-                <a href="javascript:;" class="graduationBtn aboutMeInfoBtn">
+                </div>
+                <div class="aboutme_btn education_btn mouse_pointer">
                     <p class="fas fa-graduation-cap"></p>
-                </a>
-
-                <a href="javascript:;" class="academicResultBtn aboutMeInfoBtn">
+                </div>
+                <div class="aboutme_btn skills_btn mouse_pointer">
                     <p class="fas fa-book-open"></p>
-                </a>
-
-                <a href="javascript:;" class="professionBtn">
+                </div>
+                <div class="aboutme_btn hobbies_btn mouse_pointer">
                     <p class="fas fa-laptop-code"></p>
-                </a>
+                </div>
             </div>
 
-            <a href="javascript:;" class="aboutMeLink">
-                <img src="./img/aboutMe/about-me-button.png">
-            </a>
+            <!-- The header of About Page -->
+            <div id="about_header_container"  class="cur_intro clearfix">
+                <!-- The avatar -->
+                <div id="about_avatar"></div>
 
-            <div class="aboutMeInfoWrapper aboutMeInfoCollapsed info">
+                <div id="about_content_container">
 
-                <div class="infoWrapper widthLimit">
-
-                    <div class="selfBasicInfo">
-                        <p>LAM Man Ho, Donald</p>
-                        <p><i class="fas fa-birthday-cake"></i>&nbsp;&nbsp;06-08-2002</p>
-                        <!-- <p class="addressInfo"><i class="fas fa-map-marker-alt"></i>&nbsp;&nbsp; Flat 2008,  20/F, Lam Tai House, Lam Tin Est, Lam Tin, HK</p> -->
-                        <p class="addressInfo"><i class="fas fa-map-marker-alt"></i>&nbsp;&nbsp; Lam Tin, Hong Kong</p>
-                        <p><i class="fas fa-phone-alt"></i>&nbsp;&nbsp;(+852) 96380916</p>
-                        <p><i class="fas fa-mail-bulk"></i>&nbsp;&nbsp;manholam8@gmail.com</p>
+                    <!-- The short introduction in home page -->
+                    <div id="about_short_intro">
+                        <img src="./img/signature.png" id="signiture">
+                        <h1>Hi,</h1>
+                        <h1>I'm Donald</h1>
+                        <h2>Nice to meet you</h2>
+                        <p>Welcome to my website, I used HTML5, CSS3 and JavaScript to build this website from scratch. I have not designed the interface for mobile, so it has a more friendly interface in the computer browser. I hope you enjoy my design.</p>
+                        <div id="about_more_btn" class="go_to_about mouse_pointer">
+                            <span>ABOUT ME</span>
+                        </div>
                     </div>
-                    <div class="selfIntroPar">
-                        <p></p>
-                    </div>
+                    <!-- The details introdction -->
+                    <div id="about_me_container">
+                        <div id="about_intro_bar"></div>
 
-                </div>
-
-                <div class="graduationWrapper">
-
-
-                    <div class="ktgssGraduation graduationBox">
-                        <h1>KTGSS</h1>
-                        <a href="https://www.ktgss.edu.hk/" class="ktgssIcon"></a>
-                        <h2>2014 - 2020</h2>
-                        <p>2020 KTGSS Graduated</p>
-                        <p>Scout Brigade 136</p>
-                        <p>WRO Galaxy Adventurer</p>
-                    </div>
-                    <div class="hkdse graduationBox">
-                        <h1>HKDSE</h1>
-                        <a href="https://www.jupas.edu.hk/en/" class="jupasIcon"></a>
-                        <h2>2020 Summer</h2>
-                        <p>HKDSE Best5 23</p>
-                        <p>JUPAS JS4401</p>
-                        <p>Faculty of Engineering</p>
-                        <p>Lee Woo Sing College</p>
-                    </div>
-                    <div class="majorSelection graduationBox">
-                        <h1>CSCI</h1>
-                        <a href="https://www.cuhk.edu.hk/english.html" class="cseIcon"></a>
-                        <h2>2021</h2>
-                        <p>BSc Computer Science</p>
-                        <p>ELITE Stream</p>
-                    </div>
-                    <div class="cuhkGraduation graduationBox">
-                        <h1>CUHK</h1>
-                        <a href="https://www.cse.cuhk.edu.hk" class="cuhkIcon"></a>
-                        <h2>2020 - 2024</h2>
-                    </div>
-
-                    <div class="graduationArrows arrow01"><i class="fas fa-angle-double-right"></i></div>
-                    <div class="graduationArrows arrow02"><i class="fas fa-angle-double-right"></i></div>
-                    <div class="graduationArrows arrow03"><i class="fas fa-angle-double-right"></i></div>
-
-
-                </div>
-
-
-                <div class="academicResultWrapper ">
-
-                    <!-- Academic Result Content - The main content -->
-                    <div class="academicResultContent">
-
-                        <!-- Year2 Sem1 Result -->
-                        <div class="year2Sem1Container">
-                            <a href="javascript:;" class="resultTitle">
-                                <span class="year1Sem2">Year2 Sem1</span>
-                            </a>
-                            <table class="year1Sem2Result">
-                                <thead>
-                                    <tr>
-                                        <th>Class</th>
-                                        <th>Name</th>
-                                        <th>Units</th>
-                                        <th>Grade</th>
-                                    </tr>
-                                </thead>
-                                <tr>
-                                    <td>ENGG2760</td>
-                                    <td>Probability for Engineers</td>
-                                    <td>3.00</td>
-                                    <td>A-</td>
-                                </tr>
-                                <tr>
-                                    <td>ENGG2440</td>
-                                    <td>Discrete Math for Engineers</td>
-                                    <td>3.00</td>
-                                    <td>A-</td>
-                                </tr>
-                                <tr>
-                                    <td>ENGG2020</td>
-                                    <td>Digital Logic and Systems</td>
-                                    <td>3.00</td>
-                                    <td>A</td>
-                                </tr>
-                                <tr>
-                                    <td>CSCI1130</td>
-                                    <td>Intro to Computing Using Java</td>
-                                    <td>3.00</td>
-                                    <td>A-</td>
-                                </tr>
-                                <tr>
-                                    <td>CHLT1200</td>
-                                    <td>University Chinese II</td>
-                                    <td>3.00</td>
-                                    <td>B+</td>
-                                <tr>
-                                    <td>UGFH1000</td>
-                                    <td>In Dialogue With Nature</td>
-                                    <td>3.00</td>
-                                    <td>A-</td>
-                                </tr>
-                                <tr>
-                                    <td colspan="4">Term GPA: 3.682</td>
-                                </tr>
-                                </tbody>
-                            </table>
+                        <div id="about_intro_container">
+                            <h1>Introduction</h1>
+                            <p id="intro_content">I'm an undergraduate student at the Chinese University of Hong Kong, studying computer science and currently self-learning frontend and backend developments.</p>
+                            <div id="go_info" class="fas fa-arrow-right about_header_btn mouse_pointer"></div>
                         </div>
 
-                        <!-- Year1 Sem2 Result -->
-                        <div class="year1Sem2Container collapsed">
-                            <a href="javascript:;" class="resultTitle">
-                                <span class="year1Sem2">Year1 Sem2</span>
-                            </a>
-                            <table class="year1Sem2Result">
-                                <thead>
-                                    <tr>
-                                        <th>Class</th>
-                                        <th>Name</th>
-                                        <th>Units</th>
-                                        <th>Grade</th>
-                                    </tr>
-                                </thead>
-                                <tr>
-                                    <td>ELTU1001</td>
-                                    <td>Foundation Eng for Uni Studies</td>
-                                    <td>4.00</td>
-                                    <td>B+</td>
-                                </tr>
-                                <tr>
-                                    <td>ENGG1120</td>
-                                    <td>Linear Algebra for Engineers</td>
-                                    <td>3.00</td>
-                                    <td>A</td>
-                                </tr>
-                                <tr>
-                                    <td>ENGG1130</td>
-                                    <td>Multivariable Calculus for Eng</td>
-                                    <td>3.00</td>
-                                    <td>A</td>
-                                </tr>
-                                <tr>
-                                    <td>MATH1030</td>
-                                    <td>Linear Algebra I</td>
-                                    <td>3.00</td>
-                                    <td>A-</td>
-                                <tr>
-                                    <td>STAT1011</td>
-                                    <td>Introduction to Statistics</td>
-                                    <td>3.00</td>
-                                    <td>A-</td>
-                                </tr>
-                                <tr>
-                                    <td>PHED1027</td>
-                                    <td>Team Handball (Men)</td>
-                                    <td>1.00</td>
-                                    <td>P</td>
-                                </tr>
-                                <tr>
-                                    <td colspan="4">Term GPA: 3.713</td>
-                                </tr>
-                                </tbody>
-                            </table>
+                        <div id="about_info_container" class="about_header_content">
+                            <h1>Information</h1>
+                            <ul id="info_title" class="ul_title">
+                                <li>Name</li>
+                                <li>Birthday</li>
+                                <li>Age</li>
+                                <li>Phone</li>
+                                <li>Address</li>
+                                <li>Email</li>
+                            </ul>
+                            <ul id="info_content" class="ul_content">
+                                <li>LAM Man Ho, Donald</li>
+                                <li>06th August</li>
+                                <li>19</li>
+                                <li>(852) 96380916</li>
+                                <li>Lam Tin, Kowloon, HK</li>
+                                <li>manholam8@gmail.com</li>
+                            </ul>
+                            <div id="go_intro" class="fas fa-arrow-left about_header_btn mouse_pointer"></div>
                         </div>
+                    </div>
+                </div>
+            </div>
 
-                        <!-- Year1 Sem1 Result -->
-                        <div class="year1Sem1Container collapsed">
-                            <a href="javascript:;" class="resultTitle">
-                                <span class="year1Sem1">Year1 Sem1</span>
-                            </a>
-                            <table class="year1Sem1Result">
-                                <thead>
+            <!-- Education Records -->
+            <div id="about_education_container" class="clearfix">
+                <h1>Education and Academic Records</h1>
+                <div id="edu_content_container">
+                    <div id="edu_records">
+                        <div class="edu_btn edu_btn_01 mouse_pointer"></div>
+                        <div class="edu_btn edu_btn_02 mouse_pointer"></div>
+                    </div>
+                    <h2>BSc. Computer Science</h2>
+                    <div id="edu_list">
+                        <ul id="edu_title" class="ul_title">
+                            <li>University</li>
+                            <li>Collage</li>
+                            <li>Year</li>
+                            <li>Major</li>
+                            <li>Cumulative GPA</li>
+                            <li>Major GPA</li>
+                        </ul>
+                        <ul id="edu_content" class="ul_content">
+                            <li>The Chinese University of Hong Kong</li>
+                            <li>Lee Woo Sing Collage</li>
+                            <li>2</li>
+                            <li>Computer Science</li>
+                            <li>3.667 / 4.000</li>
+                            <li>4.000 / 4.000</li>
+                        </ul>
+                    </div>
+                    <div id="edu_details_btn" class="go_to_academic mouse_pointer">Details</div>
+                </div>
+            </div>
+
+            <!-- Personal Skills -->
+
+            <!-- Development Tools -->
+            <div id="development_container" class="clearfix">
+                <h1>Programming Skills</h1>
+                <div id="development_tools_container">
+                    <div id="prog_lang_" class="development_tools">
+                        <h2>Programming Languages</h2>
+                        <div id="lang_container" class="tag_container">
+                            <img src="./img/c_lang.png" class="tag">
+                            <img src="./img/java.png" class="tag">
+                        </div>
+                        <div class="development_btn go_to_profession mouse_pointer">MORE</div>
+                    </div>
+                    <div id="front_end" class="development_tools">
+                        <h2>Web Development</h2>
+                        <div id="webdev_container" class="tag_container">
+                            <img src="./img/html5.png" class="tag">
+                            <img src="./img/css3.png" class="tag">
+                            <img src="./img/javascript.png" class="tag">
+                        </div>
+                        <div class="development_btn go_to_profession mouse_pointer">MORE</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Working Timetable -->
+        <div id="timetable_container">
+            <h1>Working Timetable (2022 Summer Semester)</h1>
+            <table id="timetable">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Monday</th>
+                        <th>Tuesday</th>
+                        <th>Wednesday</th>
+                        <th>Thursday</th>
+                        <th>Friday</th>
+                        <th>Saturday</th>
+                        <th>Sunday</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>0830 - 0930</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>0930 - 1030</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>1030 - 1130</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>1130 - 1230</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>1230 - 1330</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>1330 - 1430</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>1430 - 1530</td>
+                        <td></td>
+                        <td rowspan="2" class="timetable_01">UGEA2100</td>
+                        <td></td>
+                        <td></td>
+                        <td rowspan="2"  class="timetable_01">UGEA2100</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>1530 - 1630</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>1630 - 1730</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>1730 - 1830</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Hiking Photobiography -->
+        <!-- <div id="hiking_container">
+            <h1>Hiking Photobiography</h1>
+
+        </div> -->
+
+        <!-- The container of Academic Page -->
+        <div id="academic_container">
+            <!-- CUHK Academic Records -->
+            <div id="cuhk_academic_container">
+                <h1>The Chinese University of Hong Kong / Undergraduate (BSc. Computer Science)</h1>
+                <div id="cuhk_academic_records">
+                    <h4>Academics</h4>
+                    <table id="cuhk_academics_table" class="table_style2">
+                        <tr>
+                            <td>Board Based Engineering</td>
+                            <td>2020-2021 Term 1</td>
+                        </tr>
+                        <tr>
+                            <td>Computer Science Major</td>
+                            <td>2021-2022 Term 1</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://www.erg.cuhk.edu.hk/erg/Elite" style="cursor: help;">ELITE Stream</a></td>
+                            <td>2021-2022 Term 2</td>
+                        </tr>
+                        <tr>
+                            <td>Expected Graduation Term</td>
+                            <td>2023-2024 Term 2</td>
+                        </tr>
+                    </table> 
+                    <h4>Academic Records</h4>
+                    <table id="cuhk_academic_records_table" class="table_style2">
+                        <tr>
+                            <td>Total Grade Points</td>
+                            <td>168.700</td>
+                        </tr>
+                        <tr>
+                            <td>Total Units Taken (P/F Units)</td>
+                            <td>46 (+4)</td>
+                        </tr>
+                        <tr>
+                            <td>Cumulative GPA</td>
+                            <td>3.667</td>
+                        </tr>
+                        <tr>
+                            <td>Major GPA</td>
+                            <td>4.000</td>
+                        </tr>
+                    </table>
+                    <h4>Academic Honors and Awards</h4>
+                    <table id="award_table" class="table_style2">
+                        <thead>
+                            <tr>
+                                <th>Awards</th>
+                                <th>Acadmic Period</th>
+                            </tr>
+                        </thead>
+                        <tr>
+                            <td>Dean's List</td>
+                            <td>2020-2021 (Year 1)</td>
+                        </tr>
+                    </table>
+                    <h4>Course History</h4>
+                    <div id="academic_history">
+                        <!-- Year 2 Sem 2 -->
+                        <div class="academic_menu">
+                            <div class="academic_menu_title mouse_pointer">
+                                <h2>2022 Spring Semester</h2>
+                            </div>
+                            <h3>Enrollments</h3>
+                            <div class="academic_menu_content">
+                                <table id="year2_term2_records" class="academic_menu_table">
+                                        <thead>
+                                            <tr>
+                                                <th>Course</th>
+                                                <th>Course Name</th>
+                                                <th>Units</th>
+                                                <th>Grade</th>
+                                                <th>Grade Points</th>
+                                            </tr>
+                                        </thead>
+                                        <tr>
+                                            <td>ESTR2102</td>
+                                            <td>Data Structures</td>
+                                            <td>3</td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>ESTR2020</td>
+                                            <td>Statistics for Engineers</td>
+                                            <td>2</td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>CENG3420</td>
+                                            <td>Computer Organization & Design</td>
+                                            <td>3</td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>CSCI3250</td>
+                                            <td>Computers and Society</td>
+                                            <td>2</td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>CSCI3251</td>
+                                            <td>Engineering Practicum</td>
+                                            <td>1</td>
+                                            <td>P</td>
+                                            <td>-</td>
+                                        <tr>
+                                            <td>ELTU2014</td>
+                                            <td>English for ERG Stds I</td>
+                                            <td>3</td>
+                                            <td>B+</td>
+                                            <td>9.900</td>
+                                        </tr>
+                                        <tr>
+                                            <td>UGFN1000</td>
+                                            <td>In Dialogue With Nature</td>
+                                            <td>3</td>
+                                            <td>A</td>
+                                            <td>12.000</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2"></td>
+                                            <td>17</td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        </tbody>
+                                </table>
+                            </div>
+                            <h3>Academic Period Totals</h3>
+                            <ul class="term_total_title">
+                                <li>Units Earned</li>
+                                <li>Term GPA</li>
+                                <li>Academic Standing</li>
+                            </ul>
+                            <ul class="term_total_content">
+                                <li>-</li>
+                                <li>-</li>
+                                <li>-</li>
+                            </ul>
+                            <h3>Course Evaluation</h3>
+                        </div>
+                        <!-- Year 2 Sem 1 -->
+                        <div class="academic_menu cuhk_collapsed">
+                            <div class="academic_menu_title mouse_pointer">
+                                <h2>2021 Fall Semester</h2>
+                            </div>
+                            <h3>Enrollments</h3>
+                            <div class="academic_menu_content">
+                                <table id="year2_term1_records" class="academic_menu_table">
+                                    <thead>
+                                        <tr>
+                                            <th>Course</th>
+                                            <th>Name</th>
+                                            <th>Units</th>
+                                            <th>Grade</th>
+                                            <th>Grade Points</th>
+                                        </tr>
+                                    </thead>
                                     <tr>
-                                        <th>Class</th>
-                                        <th>Name</th>
-                                        <th>Units</th>
-                                        <th>Grade</th>
+                                        <td>ENGG2760</td>
+                                        <td>Probability for Engineers</td>
+                                        <td>2</td>
+                                        <td>A-</td>
+                                        <td>7.400</td>
                                     </tr>
-                                </thead>
-                                <tbody>
                                     <tr>
-                                        <td>CHLT1100</td>
-                                        <td>University Chinese I</td>
-                                        <td>3.00</td>
-                                        <td>P</td>
+                                        <td>ENGG2440</td>
+                                        <td>Discrete Math for Engineers</td>
+                                        <td>3</td>
+                                        <td>A-</td>
+                                        <td>11.100</td>
                                     </tr>
                                     <tr>
-                                        <td>ENGG1100</td>
-                                        <td>Problem Solving By Programming</td>
-                                        <td>3.00</td>
+                                        <td>ENGG2020</td>
+                                        <td>Digital Logic and Systems</td>
+                                        <td>3</td>
                                         <td>A</td>
+                                        <td>12.000</td>
                                     </tr>
                                     <tr>
-                                        <td>GEWS1011</td>
-                                        <td>College Induction Course</td>
-                                        <td>3.00</td>
-                                        <td>B+</td>
-                                    </tr>
-                                    <tr>
-                                        <td>MATH1510</td>
-                                        <td>Calculus for Engineers</td>
-                                        <td>3.00</td>
-                                        <td>A</td>
-                                    </tr>
-                                    <tr>
-                                        <td>PHYS1110</td>
-                                        <td>Engineering Phy: Mech & Thermo</td>
+                                        <td>CSCI1130</td>
+                                        <td>Intro to Computing Using Java</td>
                                         <td>3.00</td>
                                         <td>A-</td>
+                                        <td>11.100</td>
                                     </tr>
                                     <tr>
-                                        <td>PHED1041</td>
-                                        <td>Badminton (Men)</td>
-                                        <td>1.00</td>
-                                        <td>C-</td>
+                                        <td>CHLT1200</td>
+                                        <td>University Chinese II</td>
+                                        <td>3</td>
+                                        <td>B+</td>
+                                        <td>9.900</td>
+                                    <tr>
+                                        <td>UGFH1000</td>
+                                        <td>In Dialogue With Human</td>
+                                        <td>3</td>
+                                        <td>A-</td>
+                                        <td>11.100</td>
                                     </tr>
                                     <tr>
-                                        <td colspan="4">Term GPA: 3.592</td>
+                                        <td colspan="2"></td>
+                                        <td>17</td>
+                                        <td></td>
+                                        <td>62.600</td>
                                     </tr>
-                                </tbody>
-                            </table>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <h3>Academic Period Totals</h3>
+                            <ul class="term_total_title">
+                                <li>Units Earned</li>
+                                <li>Term GPA</li>
+                                <li>Academic Standing</li>
+                            </ul>
+                            <ul class="term_total_content">
+                                <li>17</li>
+                                <li>3.682</li>
+                                <li>Good Standing</li>
+                            </ul>
+                            <h3>Course Evaluation</h3>
                         </div>
-
-                        <!-- DSE Result -->
-                        <div class="dseContainer collapsed">
-                            <a href="javascript:;" class="resultTitle">
-                                <span class="dse">DSE Grading</span>
-                            </a>
-                            <table class="dseResult">
-                                <thead>
+                        <!-- Year 1 Sem 2 -->
+                        <div class="academic_menu cuhk_collapsed">
+                            <div class="academic_menu_title mouse_pointer">
+                                <h2>2021 Spring Semester</h2>
+                            </div>
+                            <h3>Enrollments</h3>
+                            <div class="academic_menu_content">
+                                <table class="academic_menu_table">
+                                    <thead>
+                                        <tr>
+                                            <th>Course</th>
+                                            <th>Name</th>
+                                            <th>Units</th>
+                                            <th>Grade</th>
+                                            <th>Grade Points</th>
+                                        </tr>
+                                    </thead>
                                     <tr>
-                                        <th>Subjects</th>
-                                        <th>Subject Level</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Mathematics (Compulsory and Extended)</td>
-                                        <td>5*</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Mathematics (Algebra and Calculus)</td>
-                                        <td>5*</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Physics</td>
-                                        <td>5</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Chinese Language</td>
+                                        <td>ENGG1120</td>
+                                        <td>Linear Algebra for Engineers</td>
                                         <td>3</td>
+                                        <td>A</td>
+                                        <td>12.000</td>
                                     </tr>
                                     <tr>
-                                        <td>English Language</td>
+                                        <td>ENGG1130</td>
+                                        <td>Multivariable Calculus for Eng</td>
                                         <td>3</td>
+                                        <td>A</td>
+                                        <td>12.000</td>
                                     </tr>
                                     <tr>
-                                        <td>Liberal Studies</td>
+                                        <td>MATH1030</td>
+                                        <td>Linear Algebra I</td>
                                         <td>3</td>
+                                        <td>A-</td>
+                                        <td>11.100</td>
+                                    <tr>
+                                        <td>STAT1011</td>
+                                        <td>Introduction to Statistics</td>
+                                        <td>3</td>
+                                        <td>A-</td>
+                                        <td>11.100</td>
                                     </tr>
                                     <tr>
-                                        <td colspan="4">Best Five: 23</td>
+                                        <td>ELTU1001</td>
+                                        <td>Foundation Eng for Uni Studies</td>
+                                        <td>4</td>
+                                        <td>B+</td>
+                                        <td>13.200</td>
                                     </tr>
-                                </tbody>
-                            </table>
+                                    <tr>
+                                        <td>PHED1027</td>
+                                        <td>Team Handball (Men)</td>
+                                        <td>1</td>
+                                        <td>P</td>
+                                        <td>-</td>
+                                    </tr>
+                                    <tr>
+                                        
+                                        <td colspan="2"></td>
+                                        <td>17</td>
+                                        <td></td>
+                                        <td>59.400</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <h3>Academic Period Totals</h3>
+                            <ul class="term_total_title">
+                                <li>Units Earned</li>
+                                <li>Term GPA</li>
+                                <li>Academic Standing</li>
+                            </ul>
+                            <ul class="term_total_content">
+                                <li>17</li>
+                                <li>3.713</li>
+                                <li>Good Standing</li>
+                            </ul>
+                            <h3>Course Evaluation</h3>
                         </div>
-
+                        <!-- Year 1 Sem 1 -->
+                        <div class="academic_menu cuhk_collapsed">
+                            <div class="academic_menu_title mouse_pointer">
+                                <h2>2020 Fall Semester</h2>
+                            </div>
+                            <h3>Enrollments</h3>
+                            <div class="academic_menu_content">
+                                <table class="academic_menu_table">
+                                    <thead>
+                                        <tr>
+                                            <th>Course</th>
+                                            <th>Name</th>
+                                            <th>Units</th>
+                                            <th>Grade</th>
+                                            <th>Grade Points</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>MATH1510</td>
+                                            <td>Calculus for Engineers</td>
+                                            <td>3.00</td>
+                                            <td>A</td>
+                                            <td>12.000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>ENGG1100</td>
+                                            <td>Problem Solving By Programming</td>
+                                            <td>3.00</td>
+                                            <td>A</td>
+                                            <td>12.000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>PHYS1110</td>
+                                            <td>Engineering Phy: Mech & Thermo</td>
+                                            <td>3.00</td>
+                                            <td>A-</td>
+                                            <td>11.100</td>
+                                        </tr>
+                                        <tr>
+                                            <td>CHLT1100</td>
+                                            <td>University Chinese I</td>
+                                            <td>3.00</td>
+                                            <td>P</td>
+                                            <td>-</td>
+                                        </tr>
+                                        <tr>
+                                            <td>GEWS1011</td>
+                                            <td>College Induction Course</td>
+                                            <td>3.00</td>
+                                            <td>B+</td>
+                                            <td>9.900</td>
+                                        </tr>
+                                        <tr>
+                                            <td>PHED1041</td>
+                                            <td>Badminton (Men)</td>
+                                            <td>1.00</td>
+                                            <td>C-</td>
+                                            <td>1.700</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2"></td>
+                                            <td>16</td>
+                                            <td></td>
+                                            <td>46.700</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <h3>Academic Period Totals</h3>
+                            <ul class="term_total_title">
+                                <li>Units Earned</li>
+                                <li>Term GPA</li>
+                                <li>Academic Standing</li>
+                            </ul>
+                            <ul class="term_total_content">
+                                <li>16</li>
+                                <li>3.592</li>
+                                <li>Good Standing</li>
+                            </ul>
+                            <h3>Course Evaluation</h3>
+                        </div>
                     </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-
-
-        <div class="professionHeader wrapperLimit">
-
-            <div class="professionHeaderContainer clearfix">
-
-                <h1>My Self-Learning Categories</h1>
-
-                <div class="professionLinkWrapper">
-                    <a href="javascript:;" class="EFDIntro professionLink">
-                        <img src="./img/profession/frontendDevelopment.webp">
-                        <h2>Front-End Development</h2>
-                        <p>HTML5</p>
-                        <p>CSS3</p>
-                        <p>JavaScript</p>
-                        <div class="professionLinkBtn">MORE ></div>
-                    </a>
-                </div>
-
-                <div class="professionLinkWrapper">
-                    <a href="javascript:;" class="javaIntro professionLink">
-                        <img src="./img/profession/java.webp">
-                        <h2>Java</h2>
-                        <p>JavaSE</p>
-                        <p>JavaWeb</p>
-                        <div class="professionLinkBtn">MORE ></div>
-                    </a>
-                </div>
-
-                <div class="professionLinkWrapper">
-                    <a href="javascript:;" class="unrealEngineIntro professionLink">
-                        <img src="./img/profession/unrealEngine.webp">
-                        <h2>Unreal Engine</h2>
-                        <p>C++</p>
-                        <p>Animation</p>
-                        <div class="professionLinkBtn">MORE ></div>
-                    </a>
                 </div>
             </div>
+            <!-- DSE Academic Records -->
+            <div id="dse_academic_records_container">
+                <h1>Hong Kong Diploma of Secondary Education (HKDSE)</h1>
+                <div id="dse_academic_records">
+                    <div class="academic_menu_content">
+                        <h3>2020 HKDSE Results</h3>
+                        <table class="academic_menu_table">
+                            <thead>
+                                <tr>
+                                    <th>Subject</th>
+                                    <th>Subject Level</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Mathematics (Compulsory and Extended)</td>
+                                    <td>5*</td>
+                                </tr>
+                                <tr>
+                                    <td>Mathematics (Algebra and Calculus)</td>
+                                    <td>5*</td>
+                                </tr>
+                                <tr>
+                                    <td>Physics</td>
+                                    <td>5</td>
+                                </tr>
+                                <tr>
+                                    <td>Chinese Language</td>
+                                    <td>3</td>
+                                </tr>
+                                <tr>
+                                    <td>English Language</td>
+                                    <td>3</td>
+                                </tr>
+                                <tr>
+                                    <td>Liberal Studies</td>
+                                    <td>3</td>
+                                </tr>
+                                <tr>
+                                    <td>Best 5</td>
+                                    <td>23</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
         </div>
+
+        <!-- The container of Profession Page -->
+        <div id="profession_container">
+            <div id="prog_lang_container" class="development_container">
+                <h1>Programming Languages</h1>
+                <div id="prog_lang_list_container" class="carousel_container">
+                    <ul id="prog_lang_list" class="carousel_list">
+                        <li>
+                            <div class="prog_lang_element cur_element carousel_elements">
+                                <h2>C Language</h2>
+                                <h3>Learning Status</h3>
+                                    <span>ENGG1110 Course</span>
+                                    <span>ESTR2102 Course</span>
+                                <h3>Learning Progress</h3>
+                                <h4>Basic Knowledge</h4>
+                                <span>Loop</span>
+                                <span>Array</span>
+                                <span>File I/O</span>
+                                <span>Pointer</span>
+                                <h4>Data Structure</h4>
+                                <span>Linked-List</span>
+                                <span>Stack</span>
+                                <span>Queue</span>
+                                <span>Tree</span>
+                                <span>Heap</span>
+                                <span>Hash</span>
+                                <span>Sorting</span>
+                                <span>Graph</span>
+                                <h4>ELITE Course</h4>
+                                <span>Union-Find</span>
+                                <span>Dynamic Programming</span>
+                                <span>Greedy Algorithm</span>
+                                <span>Text Processing</span>
+                                <span>Computational Geometry</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="prog_lang_element mouse_pointer carousel_elements">
+                                <h2>Java</h2>
+                                <h3>Learning Status</h3>
+                                    <span>Self-Learn</span> <span>CSCI1130 Course</span>
+                                <h3>Learning Progress</h3>
+                                <h4>Object-Oriented Programming</h4>
+                                <span>Class & Object</span>
+                                <span>Override & Overload</span>
+                                <span>Encapsulation</span>
+                                <span>Inheritance</span>
+                                <span>Polymorphism</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="frontend_container" class="development_container">
+                <h1>Front-End Development</h1>
+                <div id="frontend_list_container" class="carousel_container">
+                    <ul id="frontend_list" class="carousel_list">
+                        <li>
+                            <div class="frontend_element cur_element carousel_elements">
+                                <h2>JavaScript</h2>
+                                <h3>Learning Status</h3>
+                                <span>Self-Learn</span>
+                                <h3>Learning Progress</h3>
+                                <h4>Object</h4>
+                                <span>Enumerate</span>
+                                <span>Prototype</span>
+                                <h4>DOM</h4>
+                                <span>Manipulate CSS Style</span>
+                                <span>Event Operations</span>
+                                <h4>BOM</h4>
+                                <span>Navigator</span>
+                                <span>Timer</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="frontend_element mouse_pointer carousel_elements">
+                                <h2>CSS3</h2>
+                                <h3>Learning Status</h3>
+                                <span>Self-Learn</span>
+                                <h3>Learning Progress</h3>
+                                <span>Selector</span>
+                                <span>Layout</span>
+                                <span>Float</span>
+                                <span>Position</span>
+                                <span>Font</span>
+                                <span>Background</span>
+                                <span>Table</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="frontend_element mouse_pointer carousel_elements">
+                                <h2>HTML5</h2>
+                                <h3>Learning Status</h3>
+                                <span>Self-Learn</span>
+                                <h3>Learning Progress</h3>
+                                <span>Lable</span>
+                                <span>List</span>
+                                <span>Hyperlink</span>
+                                <span>Image</span>
+                                <span>Iframe</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <!-- <div style="margin-bottom: 1000px;"></div> -->
     </div>
-
-    <div style="margin-bottom: 1000px;"></div>
-    
 </body>
 
-<script src="./js/variable-list.js"></script>
-<script src="./js/tools.js"></script>
+<!-- JavaScript -->
 <script src="./js/function.js"></script>
-<script src="./js/main-page.js"></script>
-<script src="./js/home-page.js"></script>
-<script src="./js/about-page.js"></script>
-<script src="./js/profession-page.js"></script>
+<script src="./js/tools.js"></script>
+<script src="./js/page.js"></script>
+<script src="./js/home.js"></script>
+<script src="./js/about.js"></script>
+<script src="./js/academic.js"></script>
+<script src="./js/profession.js"></script>
+
 
 </html>

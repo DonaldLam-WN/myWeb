@@ -1,168 +1,81 @@
 // Function: Gradient Effect of changing images
-function gradientEffect(obj1, obj2, ...imgArr) {
+function gradientEffect(img1, img2, ...imgArr) {
+    var index = 0;          // images index
+    var opacity_val = 0;    // images opacity
 
-    // Define the index(represents different images) and val(represents the opacity)
-    var index = 0;
-    var val = 0;
-
-    // Switch the img1 and img2 continuously and immediately
-    setInterval(function () {
-
-        obj1.src = imgArr[index++];
-
-        if (index >= imgArr.length) {
+    // Switch images continuously and immediately
+    setInterval( function(){
+        img1.src = imgArr[index++];
+        if(index >= imgArr.length)
             index = 0;
-        }
+            img2.src = imgArr[index];
+            img2.style.opacity = 0;
+        opacity_val = 0;
+    }, 4000);
 
-        obj2.src = imgArr[index];
-        obj2.style.opacity = 0;
-        val = 0;
-
-    }, 4000)
-
-    // Gradient effect - make the upper background image have a gradient effect every 20ms
-    setInterval(function () {
-        if (val <= 100) {
-            obj2.style.opacity = val / 100;
-            val++;
+    /*
+        Gradient effect
+            reduce the opacity of img2 every 20ms to produce a gradient effect
+    */
+    setInterval(function(){
+        if(opacity_val <= 100){
+            img2.style.opacity = opacity_val / 100;
+            opacity_val++;
         }
     }, 20);
 };
 
-
-
-
-// Go To Home Page
-function goToHome() {
-
+// Function: Go to home page
+function goToHome(){
     goToTop(50);
+}
 
-    removeAboutMeContents();
-    removeProfessionContents();
-    addHomePageContents();
-
-};
-
-function addHomePageContents() {
-
-    // Animation of shifting the background img
-    move(mainPageHeader, "height", 800, 50, function () {
-        // Effect 2.
-        // To transform the prevent page
-        removeClasses(mainPageContainer, ...["aboutMeWrapper", "professionWrapper", "diaryWrapper"]);
-        addClass(mainPageContainer, "homePageWrapper");
-    });
-
-
-    // Animation of shifting the social media div and icon dic
-    move(socialMedia, "left", -400, 30, function () {
-        move(iconWrapper, "top", 0, 15, function () { })
-    });
-};
-
-function removeHomePageContents() {
-    move(mainPageHeader, "height", 0, 50, function () { });
-};
-
-
-
-
-
-
-// Go To About Me Page
-function goToAboutMe() {
-
-    goToTop(50);
-
-    removeHomePageContents();
-    removeProfessionContents();
-    addAboutMeContent();
-
-};
-
-
-function addAboutMeContent() {
-
-    professionHeader.style.height = "0";
-
-    // Animation of shifting the social media div and icon dic
-    move(iconWrapper, "top", -100, 15, function () {
-        move(socialMedia, "top", 0, 30, function () {
-            move(socialMedia, "left", -200, 30, function () { })
-        })
-    });
-
-    move(avatarContainer, "left", document.documentElement.clientWidth * 0.35, 25, function () {
-        aboutMeBtnGo(0);
-        avatarContainer.style.left = "";
-        // Effect 2.
-        // To transform the prevent page
-        removeClasses(mainPageContainer, ...["homePageWrapper", "professionWrapper", "diaryWrapper"]);
-        addClass(mainPageContainer, "aboutMeWrapper");
-    });
-
-    move(aboutMeLink, "right", -800, 40, function () { });
-};
-
-function removeAboutMeContents() {
-    aboutMeBtnReturn();
-    professionHeader.style.height = "";
-    move(aboutMeLink, "right", 0, 40, function () { });
-    move(avatarContainer, "left", document.documentElement.clientWidth * 0.1, 25, function () {
-        avatarContainer.style.left = "";
-    });
-};
-
-
-
-
-
-
-
-// Go To Profession Page
-function goToProfession() {
-
-    aboutMeHeader.style.height = "0";
-
-    goToTop(50);
-
-    // Animation of shifting the background img
-    removeHomePageContents();
-    removeAboutMeContents();
-    addProfessionContents();
-
-
-};
-
-function addProfessionContents() {
-
-
-    // Effect 2.
-    // To transform the prevent page
-
-    removeClasses(mainPageContainer, ...["homePageWrapper", "aboutMeWrapper", "diaryWrapper"]);
-    addClass(mainPageContainer, "professionWrapper");
-
-    // Animation of shifting the social media div and icon dic
-    move(socialMedia, "top", -100, 30, function () {
-        move(iconWrapper, "top", 0, 15, function () { })
-    });
-};
-
-function removeProfessionContents(){
-    aboutMeHeader.style.height = "";
-}; 
-
-
-
-
-
-
-// Width Limit Function
-function widthLimit(obj) {
-    if (document.body.clientWidth <= 1150) {
-        obj.style.minWidth = "1150px";
-    } else {
-        obj.style.minWidth = "";
+// Function - Fade out and fade in
+//fadeOut
+function fadeOut(obj, time){
+    var opacity_val = obj.style.opacity || 1;
+    function opacityOff(){
+        if(opacity_val > 0){
+            opacity_val = (opacity_val - 0.01).toFixed(2);
+            obj.style.opacity = opacity_val;
+        }else{
+            clearInterval(opacityt)
+        }
     }
+    var opacityt = setInterval(opacityOff, time);
+}
+
+//fadeIn
+function fadeIn(obj, speed){
+    var opacity_val = obj.style.opacity || 0;
+    speed = (speed / 100) || 10;
+    function opacityAdd(){
+        if(opacity_val < 1){
+            opacity_val = (parseFloat(opacity_val) + 0.01).toFixed(2);
+            obj.style.opacity = opacity_val;
+        }else{
+            clearInterval(opacityt);
+        }
+    }
+    var opacityt = setInterval(opacityAdd, speed);
+}
+
+// Drag'n'Drop
+function mouseDragAndDrop(area, obj){
+    obj.onmousedown = function(event){
+        var gapX = event.pageX - obj.offsetLeft;
+        var gapY = event.pageY - obj.offsetTop;
+        
+        document.onmousemove = function(event){
+            var left = event.pageX - gapX;
+            var top = event.pageY - gapY;
+            obj.style.left = left + "px";
+            obj.style.top = top + "px";
+        };
+
+        document.onmouseup = function(){
+            document.onmousemove = null;
+            document.onmouseup = null;
+        };
+    };
 };

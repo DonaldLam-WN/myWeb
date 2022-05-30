@@ -5,6 +5,10 @@
     clear: both;
 }
 
+.mouse_pointer{
+    cursor: pointer;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -18,4 +22,30 @@ a{
 .wrapperLimit{
     width: 1150px;
     margin: 0 auto;
+}
+
+.ul_title,
+.ul_content{
+    display: inline-block;
+    font-size: 20px;
+    line-height: 20px;
+    text-align: left;
+}
+.ul_title{
+    font-weight: bolder;
+    text-align: right;
+}
+
+.table_style2 th,
+.table_style2 td{
+    border: 1px solid black;
+    vertical-align: middle;
+    text-align: center;
+}
+.table_style2 th{
+    border-bottom: 2px solid black;
+    font-weight: bolder;
+}
+.table_style2 td:first-child{
+    font-weight: bold;
 }

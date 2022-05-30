@@ -34,7 +34,6 @@ function move(obj, attr, target, speed, callback) {
         // 在舊值的基礎上增加
         var newValue = oldValue + speed;
 
-
         // 向左移動時，需要判斷 newValue 是否小於target
         // 向右移動時，需要判斷 newValue 是否大於target
         if (speed < 0 && newValue < target || speed > 0 && newValue > target) {
@@ -83,6 +82,11 @@ function removeClass(obj, cn) {
 
 };
 
+function swapClass(obj, cn1, cn2){
+    removeClass(obj, cn1);
+    addClass(obj, cn2);
+}
+
 function toggleClass(obj, cn) {
 
     if (hasClass(obj, cn)) {
@@ -116,3 +120,13 @@ function goToTop(speed){
 
     },30)
 };
+
+function goToHeight(speed, height){
+    var timer = setInterval(function(){
+        var scrollTop = document.documentElement.scrollTop;
+        if(scrollTop == height){
+            clearInterval(timer);
+        }
+        document.documentElement.scrollTop = scrollTop - speed;
+    },30)
+}
